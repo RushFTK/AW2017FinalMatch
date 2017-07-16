@@ -1,0 +1,9 @@
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\bin\Debug\AWBW_LogCathcer.exe.config
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\bin\Debug\AWBW_LogCathcer.exe
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\bin\Debug\AWBW_LogCathcer.pdb
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.csprojResolveAssemblyReference.cache
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.Main_Form.resources
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.Properties.Resources.resources
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.csproj.GenerateResource.Cache
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.exe
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.pdb
