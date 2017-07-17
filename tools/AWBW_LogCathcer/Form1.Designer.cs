@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.targetaddress_label = new System.Windows.Forms.Label();
             this.targetaddress_textbox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.任务TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.重置RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简体中文CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.帮助主题MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于AToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.taregtaddress_getbutton = new System.Windows.Forms.Button();
             this.playerA_name_label = new System.Windows.Forms.Label();
             this.playerA_alltime_hintlable = new System.Windows.Forms.Label();
@@ -44,13 +49,10 @@
             this.playerB_alltime_hintlable = new System.Windows.Forms.Label();
             this.playerB_alltime_label = new System.Windows.Forms.Label();
             this.alllog_getbutton = new System.Windows.Forms.Button();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.帮助主题MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于AToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.重置RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.stateinfo_label = new System.Windows.Forms.ToolStripStatusLabel();
             this.downloadprocess_progressbar = new System.Windows.Forms.ToolStripProgressBar();
+            this.notifyicon = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +92,12 @@
             this.任务TToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
             this.任务TToolStripMenuItem.Text = "任务(&T)";
             // 
+            // 重置RToolStripMenuItem
+            // 
+            this.重置RToolStripMenuItem.Name = "重置RToolStripMenuItem";
+            this.重置RToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.重置RToolStripMenuItem.Text = "重置(&R)";
+            // 
             // 帮助HToolStripMenuItem
             // 
             this.帮助HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -107,7 +115,7 @@
             this.简体中文CToolStripMenuItem,
             this.englishToolStripMenuItem});
             this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.关于AToolStripMenuItem.Text = "语言(&L)";
             // 
             // 简体中文CToolStripMenuItem
@@ -122,6 +130,23 @@
             this.englishToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.englishToolStripMenuItem.Text = "&English";
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(141, 6);
+            // 
+            // 帮助主题MToolStripMenuItem
+            // 
+            this.帮助主题MToolStripMenuItem.Name = "帮助主题MToolStripMenuItem";
+            this.帮助主题MToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.帮助主题MToolStripMenuItem.Text = "帮助主题(&M)";
+            // 
+            // 关于AToolStripMenuItem1
+            // 
+            this.关于AToolStripMenuItem1.Name = "关于AToolStripMenuItem1";
+            this.关于AToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
+            this.关于AToolStripMenuItem1.Text = "关于(&A)";
+            // 
             // taregtaddress_getbutton
             // 
             this.taregtaddress_getbutton.Location = new System.Drawing.Point(342, 34);
@@ -130,6 +155,7 @@
             this.taregtaddress_getbutton.TabIndex = 3;
             this.taregtaddress_getbutton.Text = "获取";
             this.taregtaddress_getbutton.UseVisualStyleBackColor = true;
+            this.taregtaddress_getbutton.Click += new System.EventHandler(this.taregtaddress_getbutton_Click);
             // 
             // playerA_name_label
             // 
@@ -194,29 +220,6 @@
             this.alllog_getbutton.Text = "获取全部Log数据(&L)";
             this.alllog_getbutton.UseVisualStyleBackColor = true;
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
-            // 
-            // 帮助主题MToolStripMenuItem
-            // 
-            this.帮助主题MToolStripMenuItem.Name = "帮助主题MToolStripMenuItem";
-            this.帮助主题MToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.帮助主题MToolStripMenuItem.Text = "帮助主题(&M)";
-            // 
-            // 关于AToolStripMenuItem1
-            // 
-            this.关于AToolStripMenuItem1.Name = "关于AToolStripMenuItem1";
-            this.关于AToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.关于AToolStripMenuItem1.Text = "关于(&A)";
-            // 
-            // 重置RToolStripMenuItem
-            // 
-            this.重置RToolStripMenuItem.Name = "重置RToolStripMenuItem";
-            this.重置RToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.重置RToolStripMenuItem.Text = "重置(&R)";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -236,9 +239,16 @@
             // 
             // downloadprocess_progressbar
             // 
+            this.downloadprocess_progressbar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.downloadprocess_progressbar.Name = "downloadprocess_progressbar";
+            this.downloadprocess_progressbar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.downloadprocess_progressbar.Size = new System.Drawing.Size(100, 16);
             this.downloadprocess_progressbar.Value = 35;
+            // 
+            // notifyicon
+            // 
+            this.notifyicon.Text = "notifyIcon1";
+            this.notifyicon.Visible = true;
             // 
             // Main_Form
             // 
@@ -294,6 +304,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel stateinfo_label;
         private System.Windows.Forms.ToolStripProgressBar downloadprocess_progressbar;
+        private System.Windows.Forms.NotifyIcon notifyicon;
     }
 }
 

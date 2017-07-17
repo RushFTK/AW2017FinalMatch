@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AWBW_LogCathcer
 {
@@ -13,9 +14,17 @@ namespace AWBW_LogCathcer
         /// <summary>访问的目标网址 </summary>
         public string target_address { get; set; }
 
-        public bool tester()
+        public bool tester(ToolStripStatusLabel info_label)
         {
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("target_address");
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(target_address);
+                info_label.Text = "成功访问目标网页";
+            }
+            catch (Exception e)
+            {
+                info_label.Text = e.Message;
+            }
             return true;
         }
 
