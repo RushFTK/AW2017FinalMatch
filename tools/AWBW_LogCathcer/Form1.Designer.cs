@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.targetaddress_label = new System.Windows.Forms.Label();
             this.targetaddress_textbox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.任务TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.重置RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.简体中文CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.task_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reset_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.help_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.about_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chinese_language_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.english_language_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.帮助主题MToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于AToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.help_topic_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.about_ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.taregtaddress_getbutton = new System.Windows.Forms.Button();
             this.playerA_name_label = new System.Windows.Forms.Label();
             this.playerA_alltime_hintlable = new System.Windows.Forms.Label();
@@ -52,7 +51,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.stateinfo_label = new System.Windows.Forms.ToolStripStatusLabel();
             this.downloadprocess_progressbar = new System.Windows.Forms.ToolStripProgressBar();
-            this.notifyicon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.opendebugform_button = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -76,76 +76,76 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.任务TToolStripMenuItem,
-            this.帮助HToolStripMenuItem});
+            this.task_ToolStripMenuItem,
+            this.help_ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(423, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // 任务TToolStripMenuItem
+            // task_ToolStripMenuItem
             // 
-            this.任务TToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.重置RToolStripMenuItem});
-            this.任务TToolStripMenuItem.Name = "任务TToolStripMenuItem";
-            this.任务TToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
-            this.任务TToolStripMenuItem.Text = "任务(&T)";
+            this.task_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reset_ToolStripMenuItem});
+            this.task_ToolStripMenuItem.Name = "task_ToolStripMenuItem";
+            this.task_ToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
+            this.task_ToolStripMenuItem.Text = "任务(&T)";
             // 
-            // 重置RToolStripMenuItem
+            // reset_ToolStripMenuItem
             // 
-            this.重置RToolStripMenuItem.Name = "重置RToolStripMenuItem";
-            this.重置RToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.重置RToolStripMenuItem.Text = "重置(&R)";
+            this.reset_ToolStripMenuItem.Name = "reset_ToolStripMenuItem";
+            this.reset_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reset_ToolStripMenuItem.Text = "重置(&R)";
             // 
-            // 帮助HToolStripMenuItem
+            // help_ToolStripMenuItem
             // 
-            this.帮助HToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.关于AToolStripMenuItem,
+            this.help_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.about_ToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.帮助主题MToolStripMenuItem,
-            this.关于AToolStripMenuItem1});
-            this.帮助HToolStripMenuItem.Name = "帮助HToolStripMenuItem";
-            this.帮助HToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-            this.帮助HToolStripMenuItem.Text = "帮助(&H)";
+            this.help_topic_ToolStripMenuItem,
+            this.about_ToolStripMenuItem1});
+            this.help_ToolStripMenuItem.Name = "help_ToolStripMenuItem";
+            this.help_ToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.help_ToolStripMenuItem.Text = "帮助(&H)";
             // 
-            // 关于AToolStripMenuItem
+            // about_ToolStripMenuItem
             // 
-            this.关于AToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.简体中文CToolStripMenuItem,
-            this.englishToolStripMenuItem});
-            this.关于AToolStripMenuItem.Name = "关于AToolStripMenuItem";
-            this.关于AToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.关于AToolStripMenuItem.Text = "语言(&L)";
+            this.about_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chinese_language_ToolStripMenuItem,
+            this.english_language_ToolStripMenuItem});
+            this.about_ToolStripMenuItem.Name = "about_ToolStripMenuItem";
+            this.about_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.about_ToolStripMenuItem.Text = "语言(&L)";
             // 
-            // 简体中文CToolStripMenuItem
+            // chinese_language_ToolStripMenuItem
             // 
-            this.简体中文CToolStripMenuItem.Name = "简体中文CToolStripMenuItem";
-            this.简体中文CToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.简体中文CToolStripMenuItem.Text = "简体中文(&C)";
+            this.chinese_language_ToolStripMenuItem.Name = "chinese_language_ToolStripMenuItem";
+            this.chinese_language_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.chinese_language_ToolStripMenuItem.Text = "简体中文(&C)";
             // 
-            // englishToolStripMenuItem
+            // english_language_ToolStripMenuItem
             // 
-            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.englishToolStripMenuItem.Text = "&English";
+            this.english_language_ToolStripMenuItem.Name = "english_language_ToolStripMenuItem";
+            this.english_language_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.english_language_ToolStripMenuItem.Text = "&English";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(141, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
-            // 帮助主题MToolStripMenuItem
+            // help_topic_ToolStripMenuItem
             // 
-            this.帮助主题MToolStripMenuItem.Name = "帮助主题MToolStripMenuItem";
-            this.帮助主题MToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.帮助主题MToolStripMenuItem.Text = "帮助主题(&M)";
+            this.help_topic_ToolStripMenuItem.Name = "help_topic_ToolStripMenuItem";
+            this.help_topic_ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.help_topic_ToolStripMenuItem.Text = "帮助主题(&M)";
             // 
-            // 关于AToolStripMenuItem1
+            // about_ToolStripMenuItem1
             // 
-            this.关于AToolStripMenuItem1.Name = "关于AToolStripMenuItem1";
-            this.关于AToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
-            this.关于AToolStripMenuItem1.Text = "关于(&A)";
+            this.about_ToolStripMenuItem1.Name = "about_ToolStripMenuItem1";
+            this.about_ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.about_ToolStripMenuItem1.Text = "关于(&A)";
             // 
             // taregtaddress_getbutton
             // 
@@ -215,7 +215,7 @@
             // 
             this.alllog_getbutton.Location = new System.Drawing.Point(12, 206);
             this.alllog_getbutton.Name = "alllog_getbutton";
-            this.alllog_getbutton.Size = new System.Drawing.Size(117, 23);
+            this.alllog_getbutton.Size = new System.Drawing.Size(134, 23);
             this.alllog_getbutton.TabIndex = 10;
             this.alllog_getbutton.Text = "获取全部Log数据(&L)";
             this.alllog_getbutton.UseVisualStyleBackColor = true;
@@ -243,18 +243,24 @@
             this.downloadprocess_progressbar.Name = "downloadprocess_progressbar";
             this.downloadprocess_progressbar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.downloadprocess_progressbar.Size = new System.Drawing.Size(100, 16);
-            this.downloadprocess_progressbar.Value = 35;
             // 
-            // notifyicon
+            // opendebugform_button
             // 
-            this.notifyicon.Text = "notifyIcon1";
-            this.notifyicon.Visible = true;
+            this.opendebugform_button.Location = new System.Drawing.Point(152, 206);
+            this.opendebugform_button.Name = "opendebugform_button";
+            this.opendebugform_button.Size = new System.Drawing.Size(123, 23);
+            this.opendebugform_button.TabIndex = 12;
+            this.opendebugform_button.Text = "打开调试窗口...";
+            this.opendebugform_button.UseVisualStyleBackColor = true;
+            this.opendebugform_button.Visible = false;
+            this.opendebugform_button.Click += new System.EventHandler(this.opendebugform_button_Click);
             // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 254);
+            this.Controls.Add(this.opendebugform_button);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.alllog_getbutton);
             this.Controls.Add(this.playerB_alltime_label);
@@ -284,27 +290,28 @@
         private System.Windows.Forms.Label targetaddress_label;
         private System.Windows.Forms.TextBox targetaddress_textbox;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 任务TToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem task_ToolStripMenuItem;
         private System.Windows.Forms.Button taregtaddress_getbutton;
         private System.Windows.Forms.Label playerA_name_label;
         private System.Windows.Forms.Label playerA_alltime_hintlable;
         private System.Windows.Forms.Label playerA_alltime_label;
         private System.Windows.Forms.Label playerB_name_label;
-        private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关于AToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 简体中文CToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem help_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem about_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chinese_language_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem english_language_ToolStripMenuItem;
         private System.Windows.Forms.Label playerB_alltime_hintlable;
         private System.Windows.Forms.Label playerB_alltime_label;
         private System.Windows.Forms.Button alllog_getbutton;
-        private System.Windows.Forms.ToolStripMenuItem 重置RToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reset_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem 帮助主题MToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关于AToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem help_topic_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem about_ToolStripMenuItem1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel stateinfo_label;
         private System.Windows.Forms.ToolStripProgressBar downloadprocess_progressbar;
-        private System.Windows.Forms.NotifyIcon notifyicon;
+        private System.Windows.Forms.Button opendebugform_button;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

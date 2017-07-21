@@ -14,12 +14,14 @@ namespace AWBW_LogCathcer
         /// <summary>访问的目标网址 </summary>
         public string target_address { get; set; }
 
-        public bool tester(ToolStripStatusLabel info_label)
+        public bool tester(ToolStripStatusLabel info_label,ToolStripProgressBar bar)
         {
             try
             {
+                bar.Value = 0;
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(target_address);
-                info_label.Text = "成功访问目标网页";
+                info_label.Text = "成功访问目标网页(" + request.Connection + ")";
+                bar.PerformStep();
             }
             catch (Exception e)
             {

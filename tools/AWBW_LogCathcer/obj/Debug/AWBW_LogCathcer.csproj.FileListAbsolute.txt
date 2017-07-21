@@ -7,3 +7,4 @@ D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.
 D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.csproj.GenerateResource.Cache
 D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.exe
 D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.pdb
+D:\GitHubClone\AW2017FinalMatch\tools\AWBW_LogCathcer\obj\Debug\AWBW_LogCathcer.debug_form.resources

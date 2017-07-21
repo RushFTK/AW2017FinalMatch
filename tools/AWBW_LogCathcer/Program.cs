@@ -14,6 +14,7 @@ namespace AWBW_LogCathcer
         [STAThread]
         static void Main()
         {
+            global.debug_mode = true;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main_Form());
